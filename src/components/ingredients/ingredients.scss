@@ -1,0 +1,21 @@
+.ingredients{
+    width: 100%;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    &-form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    .btn-add-ingredient{
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+}

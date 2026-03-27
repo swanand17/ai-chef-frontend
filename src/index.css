@@ -1,13 +1,55 @@
-html, body, #root {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
 * {
   box-sizing: border-box;
   /* outline: 1px solid red; */
 }
+
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Plus Jakarta Sans, sans-serif;
+}
+
+#root{
+  --primary-color: #2D6A4F; /* Green  */   
+  --secondary-color: #E67E22; /* Orange */
+  --tertiary-color: #FAD02C; /* Yellow */
+}
+
+.btn_primary {
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+}
+
+.btn_secondary {
+  padding: 1rem 2rem;
+  background-color: var(--secondary-color);
+  color: #663100;
+  border-radius: 50%;
+}
+
+.btn_tertiary {
+  padding: 1rem 2rem;
+  background-color: var(--tertiary-color);
+  color:black;
+}
+
 ul,ol {
   list-style: none;
   padding: 0;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+h1{
+  font-size: 4rem;
+}
+
+i{
+  color: var(--primary-color);
+}
+

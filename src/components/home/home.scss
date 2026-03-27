@@ -1,0 +1,21 @@
+.home{
+    padding: 5rem;
+
+}
+
+
+
+.home-top-container{
+
+}
+
+.home-top-left, .home-top-right{
+    max-width: 48%;
+}
+.btn-add{
+    border-radius: 2rem !important;
+
+    & > span{
+        margin-right: 4px !important;
+    }
+}

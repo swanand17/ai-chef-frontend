@@ -5,17 +5,96 @@
 
 
 
-.home-top-container{
 
-}
 
 .home-top-left, .home-top-right{
-    max-width: 48%;
+    width: 48%;
+    height: 100%;
 }
 .btn-add{
     border-radius: 2rem !important;
 
     & > span{
         margin-right: 4px !important;
+    }
+}
+
+.home-top-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-top-right{
+    position: relative;
+}
+
+.food-quote-card{
+    position: relative;
+    height: 430px;
+    width: 345px;
+
+    &::before{
+        height: 15rem;
+        width: 12rem;
+        content: '';
+        position: absolute;
+        top: -2rem;
+        right: -2rem;
+        background-color: #FFE07D;
+        filter: blur(20px);
+        border-radius: 1rem;
+        z-index: -1;
+    }
+    &::after{
+        height: 15rem;
+        width: 12rem;
+        content: '';
+        position: absolute;
+        bottom: -2rem;
+        left: -2rem;
+        background-color: #B1F0CE;
+        filter: blur(20px);
+        border-radius: 1rem;
+        z-index: -1;
+    }
+    background: linear-gradient(rgba(0, 0, 0, 0.171), rgba(0, 0, 0, 0.096)), url('../../assets/ing-image.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    &-content{
+        background-color: rgba(255, 255, 255, 0.973);
+        padding: 1rem;
+        border-radius: 1rem;
+    
+        & * {
+            margin: 0.25rem 0;
+        }
+    }
+}
+
+.food-quote{
+
+    &-title{
+        font-size: 1.25rem;
+        color: var(--primary-color);
+        font-weight: 600;
+        text-align: left;
+    }
+    &-quote{
+        font-size: 1rem;
+        color: #555;
+        font-style: italic;
+    }
+    &-author{
+        text-align: right;
+        font-size: 0.9rem;
+        color: #777;
     }
 }

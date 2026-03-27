@@ -2,3 +2,23 @@ main{
     margin: 0 auto;
     max-width: 1440px;
 }
+
+.bg-garlic{
+    position: fixed;
+    bottom: -16vh;
+    left: 0;
+    width: 21rem;
+    object-fit: cover;
+    z-index: -1;
+    transform: rotate(20deg);
+}
+
+.bg-rosemary{
+    position: fixed;
+    top: -16vh;
+    right: 0;
+    width: 21rem;
+    object-fit: cover;
+    z-index: -1;
+    transform: rotate(-20deg);
+}

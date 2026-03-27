@@ -24,6 +24,6 @@ export default  function Recipe() {
                     <li key={index}>{instruction}</li>
                 ))}
             </ol>
-        </section> : <hr></hr>
+        </section> : <br></br>
     )
 } 

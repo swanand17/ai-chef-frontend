@@ -1,16 +1,32 @@
 .home{
     padding: 5rem;
 
+    &-top-left{
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        &-p{
+            margin: 0;
+            font-size: 1.3rem;
+            letter-spacing: 1px;
+        }
+    }
+
+    &-top-right{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
-
-
-
-
 
 .home-top-left, .home-top-right{
     width: 48%;
     height: 100%;
 }
+
 .btn-add{
     border-radius: 2rem !important;
 
@@ -23,10 +39,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.home-top-right{
-    position: relative;
 }
 
 .food-quote-card{
@@ -74,7 +86,7 @@
         border-radius: 1rem;
     
         & * {
-            margin: 0.25rem 0;
+            margin: 0.25rem 0 !important;
         }
     }
 }

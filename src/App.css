@@ -15,10 +15,10 @@ main{
 
 .bg-rosemary{
     position: fixed;
-    top: -16vh;
+    top: 0vh;
     right: 0;
     width: 21rem;
     object-fit: cover;
     z-index: -1;
-    transform: rotate(-20deg);
+    transform: rotate(-130deg);
 }

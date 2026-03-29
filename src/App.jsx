@@ -4,8 +4,8 @@ import Ingredients from './components/ingredients/ingredients'
 import Recipe from './components/recipe/recipe'
 import Home from './components/home/home'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
-import garlicImage from './assets/garlic.jpg'
-import rosemaryImage from './assets/rosemary.avif'
+import garlicImage from './assets/garlic.svg'
+import rosemaryImage from './assets/rosemary-2.svg'
 
 const theme = createTheme({
   palette: {

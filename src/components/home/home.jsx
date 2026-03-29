@@ -30,7 +30,7 @@ export default function Home() {
                 {/* Content */}
                 <div className='home-top-left'>
                     <h1>What's in your <i>kitchen</i> today?</h1>
-                    <p>Enter the ingredients you have on hand, and
+                    <p className='home-top-left-p'>Enter the ingredients you have on hand, and
                         our culinary engine will curate the perfect
                         gourmet experience for your table.
                     </p>
@@ -43,7 +43,6 @@ export default function Home() {
                         <p className='food-quote-title'><i>Today's Inspiration</i></p>
                         <p className='food-quote-quote'>"{foodQuotes[index].quote}"</p>
                         <p className='food-quote-author'><b>- {foodQuotes[index].author}</b></p>
-
                         </div>
                     </div>
                 </div>

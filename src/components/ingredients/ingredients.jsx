@@ -1,7 +1,6 @@
 import { useState } from 'react'
+import { useDispatch } from 'react-redux';
 import './ingredients.scss'
-import recipeData from '../../recipes'
-import Card from '../card/card';
 
 import Box from '@mui/material/Box';
 import { Add } from '@mui/icons-material';
@@ -10,9 +9,10 @@ import SearchIcon from '@mui/icons-material/Search';
 import CloseIcon from '@mui/icons-material/Close';
 import { Tooltip } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-
+import SearchResults from '../search-results/search-results';
 
 export default function Ingredients() {
+    const dispatch = useDispatch();
     const [ingredients, setIngredients] = useState(["potato", "onion", "garlic", "ginger"]);
     const [recipeFound, setRecipeFound] = useState(false);
 
@@ -29,10 +29,9 @@ export default function Ingredients() {
         setIngredients(updatedIngredients);
     }
     
-    function getRecipe(formData) {
-        // const preference = formData.get('preference');
-        // console.log(preference);
+    function getRecipe() {
         console.log('Getting recipe with ingredients:', ingredients);
+        dispatch({ type: 'ingredients/setSearchedIngredients', payload: ingredients });
         setRecipeFound(true);
     }
     
@@ -67,52 +66,11 @@ export default function Ingredients() {
                 ))}
             </div>
             {ingredients.length > 3 && (
-            <>
-                {/* <form action={getRecipe} className="recipe-preference-form">
-                    <fieldset>
-                    <legend>Recipe Preference:</legend>
-
-                    <label>
-                        <input type="radio" name="preference" value="vegetarian" />
-                        Vegetarian
-                    </label>
-
-                    <label>
-                        <input type="radio" name="preference" value="eggetarian" />
-                        Eggitarian
-                    </label>
-
-                    <label>
-                        <input type="radio" name="preference" value="non-vegetarian" />
-                        Non-Vegetarian
-                    </label>
-
-                    <label>
-                        <input
-                        type="radio"
-                        name="preference"
-                        value="all of the above"
-                        defaultChecked
-                        />
-                        All of the above
-                    </label>
-                    </fieldset>
-
-                    <button className="btn-get-recipe" type="submit">
-                    Get Recipe
-                    </button>
-                </form> */}
-                
                 <Button onClick={getRecipe} color='secondary' className='btn-get-recipe' variant="contained" endIcon={<ArrowForwardIcon />}>
                     Get Recipe
                 </Button>
-
-                {recipeFound &&
-                recipeData.map((recipe) => (
-                    <Card key={recipe.id} {...recipe}/>
-                ))}
-            </>
             )}
+            {recipeFound && <SearchResults />} 
         </section>
     )
 } 

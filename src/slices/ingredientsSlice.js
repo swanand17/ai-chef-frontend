@@ -16,8 +16,6 @@ const ingredientsSlice = createSlice({name : 'ingredients',
     }
 });
 
-
-
 export const { setSearchedIngredients, clearSearchedIngredients } = ingredientsSlice.actions;
 export const selectSearchedIngredients = (state) => { console.log(state); return state.searchedIngredients.searchedIngredients};
 export default ingredientsSlice.reducer;

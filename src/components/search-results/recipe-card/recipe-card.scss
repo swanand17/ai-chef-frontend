@@ -1,0 +1,38 @@
+
+.recipe-card{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    &-image {
+        // height: 15rem;
+        width: 12rem;
+        aspect-ratio: 1/1;
+        border-radius: 10px;
+    }
+    &-title{
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin: 0px;
+    }
+    &-info{
+        display: flex;
+        gap: 5px;
+        
+        
+    }
+    &-time{
+        font-size: 0.9rem;
+        color: #404943;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+    &-difficulty{
+        font-size: 0.9rem;
+        color: #404943;
+        display: flex;
+        align-items: center;
+        gap: 3px;
+    }
+}

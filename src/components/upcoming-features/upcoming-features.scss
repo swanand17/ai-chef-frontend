@@ -1,0 +1,11 @@
+.upcoming-features{
+    padding: 5rem;
+
+    &-content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+}

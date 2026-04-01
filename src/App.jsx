@@ -1,11 +1,10 @@
 import './App.css'
 import Header from './components/header/header'
-import Ingredients from './components/ingredients/ingredients'
-import Recipe from './components/recipe/recipe'
-import Home from './components/home/home'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import garlicImage from './assets/garlic.svg'
 import rosemaryImage from './assets/rosemary-2.svg'
+import AppRoutes from './AppRoutes';
+import Footer from './components/footer/footer';
 
 const theme = createTheme({
   palette: {
@@ -28,11 +27,11 @@ function App() {
       <ThemeProvider theme={theme}>
         <Header />
         <main className='main'>
-          <Home/>
-          <Recipe />
+          <AppRoutes />
         </main>
         <img src={garlicImage} className="bg-garlic" />
         <img src={rosemaryImage} className="bg-rosemary" />
+        <Footer />
       </ThemeProvider>
     </>
   )

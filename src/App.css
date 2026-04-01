@@ -22,3 +22,12 @@ main{
     z-index: -1;
     transform: rotate(-130deg);
 }
+
+a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 1px;
+    border-bottom: 2px solid transparent;
+
+   
+}

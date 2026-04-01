@@ -11,10 +11,14 @@ import { Tooltip } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import SearchResults from '../search-results/search-results';
 
+import { useNavigate } from "react-router-dom";
+import recipeData from '../../recipes.js';
+
 export default function Ingredients() {
     const dispatch = useDispatch();
     const [ingredients, setIngredients] = useState(["potato", "onion", "garlic", "ginger"]);
     const [recipeFound, setRecipeFound] = useState(false);
+    const navigate = useNavigate();
 
     function addIngredient(formData) {
         const ingredientName = formData.get('ingredientName');
@@ -32,7 +36,9 @@ export default function Ingredients() {
     function getRecipe() {
         console.log('Getting recipe with ingredients:', ingredients);
         dispatch({ type: 'ingredients/setSearchedIngredients', payload: ingredients });
+        dispatch({ type: 'suggestedRecipes/setSuggestedRecipes', payload: recipeData });
         setRecipeFound(true);
+        navigate("/home/search-results");
     }
     
 
@@ -50,7 +56,7 @@ export default function Ingredients() {
                         <label htmlFor="ingredientName" className="visually-hidden">Add an ingredient (e.g. Chicken, Basil, Garlic...)</label>
                         <input className='search-input' type="text" name="ingredientName" placeholder="Add an ingredient (e.g. Chicken, Basil, Garlic...)" />
                     </div>
-                    <Button type="submit" className='btn-add' variant="contained" startIcon={<Add />}>
+                    <Button type="submit" className='btn-add pointer' variant="contained" startIcon={<Add />}>
                       Add
                     </Button>
                 </Box>
@@ -60,17 +66,17 @@ export default function Ingredients() {
                 {ingredients.map((ingredient, index) => (
                     <p className='chip' key={index}>{toSentenceCase(ingredient)}
                         <Tooltip title="Remove" placement="bottom">
-                            <CloseIcon  className="close-icon" onClick={() => removeIngredient(index)} />
+                            <CloseIcon  className="close-icon pointer" onClick={() => removeIngredient(index)} />
                         </Tooltip>
                     </p>
                 ))}
             </div>
             {ingredients.length > 3 && (
-                <Button onClick={getRecipe} color='secondary' className='btn-get-recipe' variant="contained" endIcon={<ArrowForwardIcon />}>
+                <Button onClick={getRecipe} color='secondary' className='btn-get-recipe pointer' variant="contained" endIcon={<ArrowForwardIcon />}>
                     Get Recipe
                 </Button>
             )}
-            {recipeFound && <SearchResults />} 
+            {/* {recipeFound && <SearchResults />}  */}
         </section>
     )
 } 

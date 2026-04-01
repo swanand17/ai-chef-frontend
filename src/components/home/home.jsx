@@ -29,6 +29,7 @@ export default function Home() {
             <div className='home-top-container'>
                 {/* Content */}
                 <div className='home-top-left'>
+                    <p className='tertiary-tag'>THE ALCHEMIST'S PALETTE</p>
                     <h1>What's in your <i>kitchen</i> today?</h1>
                     <p className='home-top-left-p'>Enter the ingredients you have on hand, and
                         our culinary engine will curate the perfect

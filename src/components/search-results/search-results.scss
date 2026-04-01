@@ -9,4 +9,25 @@
         font-size: 1.3rem;
         letter-spacing: 1px;
     }
+    &-tag-container{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+}
+
+.recipes-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.search-results-section-tag-separator{
+    width: 0.75rem;
+    color: #8080808f
+}
+
+.recipies-found-number{
+    font-size: 1rem;
+    color: #00000073;
 }
